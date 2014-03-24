@@ -1,0 +1,16 @@
+#N canvas 796 144 450 300 12;
+#X obj 35 83 phasor~;
+#X obj 121 57 inlet phasereset;
+#X obj 35 57 inlet~ freq;
+#X obj 36 115 *~ 2;
+#X obj 36 142 -~ 1;
+#X obj 37 166 outlet~ sig;
+#X text 155 93 Basic Sawtooth oscillator;
+#X text 155 103 -------------------------;
+#X text 159 131 Left - frequency (signal/value);
+#X text 159 144 Right - phase reset (value);
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

@@ -1,0 +1,25 @@
+#N canvas 431 262 450 157 10;
+#X obj 115 38 inlet~ frequency;
+#X obj 116 61 phasor~;
+#X text 113 19 Pulse Wave with interactive pulsor;
+#X obj 238 37 r \$0-pulsemod;
+#X obj 115 117 outlet~ sigpulse;
+#X obj 28 39 hsl 70 15 0 1 0 0 \$0-pulsemod \$0-pulsein pulsewidth
+-2 -8 0 10 -261234 -1 -1 3450 1;
+#X obj 299 65 inlet mod;
+#X obj 299 93 clip 0 1;
+#X obj 299 115 s \$0-pulsein;
+#X obj 372 60 loadbang;
+#X msg 372 98 0.5;
+#X obj 115 84 expr~ $v1 > $f2;
+#X obj 238 60 clip~ 0 1;
+#X connect 0 0 1 0;
+#X connect 1 0 11 0;
+#X connect 3 0 12 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 4 0;
+#X connect 12 0 11 1;
+#X coords 0 -1 1 1 85 40 2 20 20;

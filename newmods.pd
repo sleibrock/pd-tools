@@ -1,0 +1,21 @@
+#N canvas 464 157 446 386 10;
+#X obj 20 160 dsp~;
+#X obj 23 9 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1900 1;
+#X obj 20 29 mtof~;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array osc 1024 float 2;
+#X coords 0 1 1023 -1 200 140 1;
+#X restore 199 186 graph;
+#X obj 288 142 metro 100;
+#X obj 295 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 198 158 tabwrite~ osc;
+#X obj 20 54 9harm~;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 7 0 0 0;
+#X connect 7 0 0 1;
+#X connect 7 0 6 0;
