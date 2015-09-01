@@ -25,7 +25,4 @@ Pure Data a lot cooler. Get Extended.
 
 #What's this Repo for?
 
-It's meant to store a lot of my PD scripts/applications. 
-It's hard to keep stuff documented in it for Github, but 
-I'll try to add readme notes for important projects.
-
+Basically to keep my scripts safely stored somewhere! Also if someone wants to mull through the scripts to find something they like.
