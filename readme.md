@@ -1,7 +1,4 @@
 #PD Tools/Projects
-by [leibrockoli](http://github.com/leibrockoli)
-
-#What's this mess about?
 
 Pure Data is a visual audio-programming language designed
 at creating interactive applications. It works a lot like
