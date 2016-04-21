@@ -36,3 +36,22 @@ Get it [here](http://puredata.info/)
 
 If you'd like to submit fixes or report issues, please do.
 
+# Program Design
+
+To keep in synergy with PureData semantics:
+
+* Any object that outputs an audio signal should end in "~"
+* Otherwise, it should be named normally [a-zA-Z0-9|(\_,!)]
+
+Example: if you have an object that sends out a cosine wave, name it "cos~".
+
+This is designed so that the user knows what the object will output, without 
+having go inspect it.
+
+If you are using SENDs and RECEIVEs (*s* and *r*), be sure to prefix variables with "$0-" to make them 
+unique to the program instance. Otherwise they will cause overlap with other 
+instances of programs (if you have two synths sending out a mix signal, 
+another instance can override the send).
+
+If code is starting to look mangled, consider grouping code inside of objects 
+to organize objects better.
