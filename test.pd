@@ -1,8 +1,0 @@
-#N canvas 525 21 450 300 10;
-#X obj 62 121 midi-to-note;
-#X floatatom 58 79 5 0 127 0 - - -;
-#X symbolatom 114 160 10 0 0 0 - - -;
-#X floatatom 61 159 5 0 0 0 - - -;
-#X connect 0 0 3 0;
-#X connect 0 1 2 0;
-#X connect 1 0 0 0;

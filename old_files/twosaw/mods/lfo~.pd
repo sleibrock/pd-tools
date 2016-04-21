@@ -1,0 +1,11 @@
+#N canvas 296 211 388 118 10;
+#X obj 16 18 inlet~ sig;
+#X text 55 41 LFO normalizer;
+#X text 55 51 ----------------;
+#X text 55 61 Turn a [-1 \, 1] signal into a [0 \, 1];
+#X obj 16 43 /~ 2;
+#X obj 16 66 +~ 1;
+#X obj 16 88 outlet~ op;
+#X connect 0 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;

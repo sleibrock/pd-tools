@@ -1,0 +1,11 @@
+#N canvas 97 234 450 300 10;
+#X obj 21 13 inlet~ sig;
+#X text 96 15 0..1 phasor signal;
+#X obj 21 105 outlet~ sine;
+#X obj 21 34 *~ 2;
+#X obj 21 61 -~ 1;
+#X obj 21 84 expr~ sin($v1 * 2 * (4*atan(1)));
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;

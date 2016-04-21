@@ -1,0 +1,22 @@
+#N canvas 792 143 489 376 10;
+#X msg 21 -9 open noise.wav;
+#X obj 21 176 writesf~ 2;
+#X obj 21 207 monitor;
+#X obj 87 74 del 2000;
+#X obj 42 35 bng 30 250 50 0 empty empty empty 17 7 0 10 -260097 -1
+-1;
+#X msg 42 92 start;
+#X msg 87 92 stop;
+#X obj 56 148 noise~;
+#X msg 105 121 print;
+#X connect 0 0 1 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 7 0 1 1;
+#X connect 7 0 2 0;
+#X connect 7 0 2 1;
+#X connect 8 0 1 0;
