@@ -1,0 +1,36 @@
+#N canvas 1600 49 959 1030 10;
+#X obj 176 21 inlet~ left-sig;
+#X obj 290 21 inlet~ right-sig;
+#X obj 177 154 outlet~;
+#X obj 33 30 hsl 128 15 0 1 0 0 \$0-sigmix-bar \$0-sigmix-bar empty
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X floatatom 32 50 5 0 0 0 - #0-sigmix-bar #0-nothing, f 5;
+#X text 77 51 Signal Mixer;
+#X obj 21 133 s \$0-sigmix-bar;
+#X obj 21 109 f 0.5;
+#X obj 21 84 loadbang;
+#X obj 177 110 *~;
+#X obj 290 111 *~;
+#X obj 177 132 +~;
+#X obj 201 63 - 1;
+#X obj 308 46 r \$0-sigmix-bar;
+#X obj 201 84 abs;
+#X text 16 182 Sigmixer mixes two signals and scales the signal based
+on the position of the hslider. This can be considered a panning tool
+as well.;
+#X obj 339 101 inlet controller;
+#X obj 339 143 s \$0-sigmix-bar;
+#X text 343 123 control from outside;
+#X connect 0 0 9 0;
+#X connect 1 0 10 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 1;
+#X connect 11 0 2 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 13 0 10 1;
+#X connect 14 0 9 1;
+#X connect 16 0 17 0;
+#X coords 0 -1 1 1 150 60 2 20 20;
