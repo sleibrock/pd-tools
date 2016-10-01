@@ -1,4 +1,6 @@
-.wav
-.jpg
-.png
-.asd
+*.wav
+*.jpg
+*.png
+*.asd
+*.mp3
+*.mp4
